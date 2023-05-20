@@ -1,0 +1,193 @@
+.class public final Lcom/google/android/gms/wallet/zzk;
+.super Ljava/lang/Object;
+.source "com.google.android.gms:play-services-wallet@@18.1.2"
+
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator<",
+        "Lcom/google/android/gms/wallet/GiftCardWalletObject;",
+        ">;"
+    }
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .registers 1
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .registers 18
+
+    move-object/from16 v0, p1
+
+    .line 7
+    invoke-static/range {p1 .. p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->validateObjectHeader(Landroid/os/Parcel;)I
+
+    move-result v1
+
+    const-wide/16 v2, 0x0
+
+    const/4 v4, 0x0
+
+    move-wide v10, v2
+
+    move-wide v13, v10
+
+    move-object v6, v4
+
+    move-object v7, v6
+
+    move-object v8, v7
+
+    move-object v9, v8
+
+    move-object v12, v9
+
+    move-object v15, v12
+
+    .line 16
+    :goto_11
+    invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->dataPosition()I
+
+    move-result v2
+
+    if-ge v2, v1, :cond_53
+
+    .line 17
+    invoke-static/range {p1 .. p1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->readHeader(Landroid/os/Parcel;)I
+
+    move-result v2
+
+    .line 18
+    invoke-static {v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->getFieldId(I)I
+
+    move-result v3
+
+    packed-switch v3, :pswitch_data_5e
+
+    .line 43
+    invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->skipUnknownField(Landroid/os/Parcel;I)V
+
+    goto :goto_11
+
+    .line 41
+    :pswitch_26
+    invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->createString(Landroid/os/Parcel;I)Ljava/lang/String;
+
+    move-result-object v15
+
+    goto :goto_11
+
+    .line 38
+    :pswitch_2b
+    invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->readLong(Landroid/os/Parcel;I)J
+
+    move-result-wide v13
+
+    goto :goto_11
+
+    .line 35
+    :pswitch_30
+    invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->createString(Landroid/os/Parcel;I)Ljava/lang/String;
+
+    move-result-object v12
+
+    goto :goto_11
+
+    .line 32
+    :pswitch_35
+    invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->readLong(Landroid/os/Parcel;I)J
+
+    move-result-wide v10
+
+    goto :goto_11
+
+    .line 29
+    :pswitch_3a
+    invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->createString(Landroid/os/Parcel;I)Ljava/lang/String;
+
+    move-result-object v9
+
+    goto :goto_11
+
+    .line 26
+    :pswitch_3f
+    invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->createString(Landroid/os/Parcel;I)Ljava/lang/String;
+
+    move-result-object v8
+
+    goto :goto_11
+
+    .line 23
+    :pswitch_44
+    invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->createString(Landroid/os/Parcel;I)Ljava/lang/String;
+
+    move-result-object v7
+
+    goto :goto_11
+
+    .line 19
+    :pswitch_49
+    sget-object v3, Lcom/google/android/gms/wallet/wobs/CommonWalletObject;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    .line 20
+    invoke-static {v0, v2, v3}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->createParcelable(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+
+    move-result-object v2
+
+    move-object v6, v2
+
+    check-cast v6, Lcom/google/android/gms/wallet/wobs/CommonWalletObject;
+
+    goto :goto_11
+
+    .line 45
+    :cond_53
+    invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/SafeParcelReader;->ensureAtEnd(Landroid/os/Parcel;I)V
+
+    .line 46
+    new-instance v0, Lcom/google/android/gms/wallet/GiftCardWalletObject;
+
+    move-object v5, v0
+
+    invoke-direct/range {v5 .. v15}, Lcom/google/android/gms/wallet/GiftCardWalletObject;-><init>(Lcom/google/android/gms/wallet/wobs/CommonWalletObject;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;JLjava/lang/String;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_5e
+    .packed-switch 0x2
+        :pswitch_49
+        :pswitch_44
+        :pswitch_3f
+        :pswitch_3a
+        :pswitch_35
+        :pswitch_30
+        :pswitch_2b
+        :pswitch_26
+    .end packed-switch
+.end method
+
+.method public final synthetic newArray(I)[Ljava/lang/Object;
+    .registers 2
+
+    .line 4
+    new-array p1, p1, [Lcom/google/android/gms/wallet/GiftCardWalletObject;
+
+    return-object p1
+.end method

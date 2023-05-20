@@ -1,0 +1,131 @@
+.class public final Lcom/google/android/flexbox/R$styleable;
+.super Ljava/lang/Object;
+.source "R.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/google/android/flexbox/R;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "styleable"
+.end annotation
+
+
+# static fields
+.field public static final FlexboxLayout:[I
+
+.field public static final FlexboxLayout_Layout:[I
+
+.field public static final FlexboxLayout_Layout_layout_alignSelf:I = 0x0
+
+.field public static final FlexboxLayout_Layout_layout_flexBasisPercent:I = 0x1
+
+.field public static final FlexboxLayout_Layout_layout_flexGrow:I = 0x2
+
+.field public static final FlexboxLayout_Layout_layout_flexShrink:I = 0x3
+
+.field public static final FlexboxLayout_Layout_layout_maxHeight:I = 0x4
+
+.field public static final FlexboxLayout_Layout_layout_maxWidth:I = 0x5
+
+.field public static final FlexboxLayout_Layout_layout_minHeight:I = 0x6
+
+.field public static final FlexboxLayout_Layout_layout_minWidth:I = 0x7
+
+.field public static final FlexboxLayout_Layout_layout_order:I = 0x8
+
+.field public static final FlexboxLayout_Layout_layout_wrapBefore:I = 0x9
+
+.field public static final FlexboxLayout_alignContent:I = 0x0
+
+.field public static final FlexboxLayout_alignItems:I = 0x1
+
+.field public static final FlexboxLayout_dividerDrawable:I = 0x2
+
+.field public static final FlexboxLayout_dividerDrawableHorizontal:I = 0x3
+
+.field public static final FlexboxLayout_dividerDrawableVertical:I = 0x4
+
+.field public static final FlexboxLayout_flexDirection:I = 0x5
+
+.field public static final FlexboxLayout_flexWrap:I = 0x6
+
+.field public static final FlexboxLayout_justifyContent:I = 0x7
+
+.field public static final FlexboxLayout_maxLine:I = 0x8
+
+.field public static final FlexboxLayout_showDivider:I = 0x9
+
+.field public static final FlexboxLayout_showDividerHorizontal:I = 0xa
+
+.field public static final FlexboxLayout_showDividerVertical:I = 0xb
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 1
+
+    const/16 v0, 0xc
+
+    .line 61
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_14
+
+    sput-object v0, Lcom/google/android/flexbox/R$styleable;->FlexboxLayout:[I
+
+    const/16 v0, 0xa
+
+    .line 74
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_30
+
+    sput-object v0, Lcom/google/android/flexbox/R$styleable;->FlexboxLayout_Layout:[I
+
+    return-void
+
+    nop
+
+    :array_14
+    .array-data 4
+        0x7f04002d
+        0x7f04002e
+        0x7f040145
+        0x7f040146
+        0x7f040147
+        0x7f040198
+        0x7f040199
+        0x7f040209
+        0x7f0402a8
+        0x7f04034f
+        0x7f040350
+        0x7f040351
+    .end array-data
+
+    :array_30
+    .array-data 4
+        0x7f04021b
+        0x7f04024e
+        0x7f04024f
+        0x7f040250
+        0x7f040259
+        0x7f04025a
+        0x7f04025b
+        0x7f04025c
+        0x7f04025e
+        0x7f040263
+    .end array-data
+.end method
+
+.method private constructor <init>()V
+    .registers 1
+
+    .line 59
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method

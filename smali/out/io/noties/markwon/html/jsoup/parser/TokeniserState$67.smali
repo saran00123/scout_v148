@@ -1,0 +1,80 @@
+.class final enum Lio/noties/markwon/html/jsoup/parser/TokeniserState$67;
+.super Lio/noties/markwon/html/jsoup/parser/TokeniserState;
+.source "TokeniserState.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lio/noties/markwon/html/jsoup/parser/TokeniserState;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x4010
+    name = null
+.end annotation
+
+
+# direct methods
+.method constructor <init>(Ljava/lang/String;I)V
+    .registers 4
+
+    const/4 v0, 0x0
+
+    .line 1601
+    invoke-direct {p0, p1, p2, v0}, Lio/noties/markwon/html/jsoup/parser/TokeniserState;-><init>(Ljava/lang/String;ILio/noties/markwon/html/jsoup/parser/TokeniserState$1;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method read(Lio/noties/markwon/html/jsoup/parser/Tokeniser;Lio/noties/markwon/html/jsoup/parser/CharacterReader;)V
+    .registers 6
+
+    const-string v0, "]]>"
+
+    .line 1603
+    invoke-virtual {p2, v0}, Lio/noties/markwon/html/jsoup/parser/CharacterReader;->consumeTo(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 1604
+    iget-object v2, p1, Lio/noties/markwon/html/jsoup/parser/Tokeniser;->dataBuffer:Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 1605
+    invoke-virtual {p2, v0}, Lio/noties/markwon/html/jsoup/parser/CharacterReader;->matchConsume(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_17
+
+    invoke-virtual {p2}, Lio/noties/markwon/html/jsoup/parser/CharacterReader;->isEmpty()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_2a
+
+    .line 1606
+    :cond_17
+    new-instance p2, Lio/noties/markwon/html/jsoup/parser/Token$CData;
+
+    iget-object v0, p1, Lio/noties/markwon/html/jsoup/parser/Tokeniser;->dataBuffer:Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p2, v0}, Lio/noties/markwon/html/jsoup/parser/Token$CData;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, p2}, Lio/noties/markwon/html/jsoup/parser/Tokeniser;->emit(Lio/noties/markwon/html/jsoup/parser/Token;)V
+
+    .line 1607
+    sget-object p2, Lio/noties/markwon/html/jsoup/parser/TokeniserState$67;->Data:Lio/noties/markwon/html/jsoup/parser/TokeniserState;
+
+    invoke-virtual {p1, p2}, Lio/noties/markwon/html/jsoup/parser/Tokeniser;->transition(Lio/noties/markwon/html/jsoup/parser/TokeniserState;)V
+
+    :cond_2a
+    return-void
+.end method
